@@ -5,7 +5,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <main className="flex flex-col">
+    <main className="flex flex-col bg-light-bg dark:bg-dark-bg">
       <Hero />
       <span>[Coloque aqui a sessão de benefits]</span>
       <span>[Coloque aqui a sesão de tech-and-lang]</span>

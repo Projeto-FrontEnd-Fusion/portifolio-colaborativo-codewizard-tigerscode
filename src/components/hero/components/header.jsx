@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 const Header = () => {
     return ( 
         <header 
-            className="flex items-center justify-between px-4 h-24 dark:bg-dark-bg bg-light-bg"
+            className="flex items-center justify-between px-4 h-24"
         >
             <GitButton />
             
