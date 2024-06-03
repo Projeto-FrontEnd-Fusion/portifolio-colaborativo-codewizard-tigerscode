@@ -1,13 +1,14 @@
 import Header from "./components/header";
 import { LiaReact } from "react-icons/lia";
 import { TbBrandJavascript, TbBrandTailwind, TbBrandVite } from "react-icons/tb";
+import PhotoGrid from "./components/photo-grid";
 
 const Hero = () => {
     return ( 
         <>
-           <Header />
+            <Header />
 
-           <section className="pt-[35px]">
+            <section className="pt-[35px]">
                <h1 className="text-center space-y-2">
                     <span className="block font-subtitle text-primary-muted dark:text-gray-text text-[18px]">
                         projeto
@@ -19,14 +20,16 @@ const Hero = () => {
                         Codifique o seu futuro hoje!
                     </span>
                </h1>
-           </section>
+            </section>
 
-           <section className="flex justify-center items-center gap-10 mt-[91px] text-pirmary-muted dark:text-white">
+            <section className="flex justify-center items-center gap-10 mt-[91px] text-pirmary-muted dark:text-white">
                 <LiaReact size={36} />
                 <TbBrandVite size={36} />
                 <TbBrandJavascript size={36} />
                 <TbBrandTailwind size={36} />
-           </section>
+            </section>
+
+            <PhotoGrid />
         </>
      );
 }
