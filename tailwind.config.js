@@ -4,11 +4,14 @@ import plugin from 'tailwindcss/plugin'
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'selector',
   theme: {
     extend: {
       backgroundColor: {
         'button-primary-bg': '#16C586',
-        'button-secondary-bg': '#0368FF'
+        'button-secondary-bg': '#0368FF',
+        'dark-bg': '#0F0920',
+        'light-bg': '#EBEBEB',
       },
       colors: {
         'white-one': '#F2F0FF',

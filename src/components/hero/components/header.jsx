@@ -1,19 +1,17 @@
-import { LuMenu, LuSunMoon } from "react-icons/lu"
+import { LuMenu } from "react-icons/lu"
 import GitButton from "./git-button";
+import ThemeToggle from "./theme-toggle";
 
 const Header = () => {
     return ( 
         <header 
-            className="flex items-center justify-between px-4 h-24 bg-[#0F0920]"
+            className="flex items-center justify-between px-4 h-24 dark:bg-dark-bg bg-light-bg"
         >
             <GitButton />
             
             <div className="flex justify-center items-center gap-3">
-                
-                <button className="text-white-two hover:text-gray-text">
-                    <LuSunMoon size={24} />
-                </button>
-                <button className="text-white-two hover:text-gray-text">
+                <ThemeToggle />
+                <button className="dark:text-white-two hover:text-gray-text text-black">
                     <LuMenu size={36}/>
                 </button>
             </div>
