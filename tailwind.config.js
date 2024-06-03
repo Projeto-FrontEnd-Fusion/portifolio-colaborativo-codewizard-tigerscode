@@ -6,6 +6,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: 'selector',
   theme: {
+    fontFamily: {
+      'title': 'Zen Dots, sans-serif',
+      'subtitle': 'Inconsolata, monospace',
+      'body': 'Mulish, sans-serif',
+    },
     extend: {
       backgroundColor: {
         'button-primary-bg': '#16C586',
@@ -14,12 +19,14 @@ export default {
         'light-bg': '#EBEBEB',
       },
       colors: {
+        'primary': '#0F0920',
+        'pirmary-muted': '#221C3E',
         'white-one': '#F2F0FF',
         'white-two': '#EBEBEB',
         'white-tree': '#E1E1E1',
         'white-four': '#FFFF',
         'gray-text': '#B5B3BC'
-      }
+      },
     },
   },
   plugins: [
@@ -38,15 +45,6 @@ export default {
           'font-size': '16px',
           'font-weight': '700',
         },
-        '.title-font': {
-          'font-family': 'ZenDots, sans-serif',
-        },
-        '.subtitle-font': {
-          'font-family': 'Inconsolata, sans-serif',
-        },
-        '.body-font': {
-          'font-family': 'Mulish, sans-serif',
-        }
       })
     })
   ],
