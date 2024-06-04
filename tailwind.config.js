@@ -13,8 +13,8 @@ export default {
     },
     extend: {
       backgroundColor: {
-        'button-primary-bg': '#16C586',
-        'button-secondary-bg': '#0368FF',
+        'btn-primary': '#16C586',
+        'btn-secondary': '#0368FF',
         'dark-bg': '#0F0920',
         'light-bg': '#EBEBEB',
       },
