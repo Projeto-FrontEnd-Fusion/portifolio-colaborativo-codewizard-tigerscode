@@ -3,7 +3,7 @@ import { LuGithub } from "react-icons/lu"
 const GitButton = () => {
     return ( 
         <button 
-            className="github-button hover:bg-button-secondary-bg hover:text-white bg-button-primary-bg"
+            className="github-button hover:bg-btn-secondary hover:text-white bg-btn-primary"
         >
             <span>
                 github
