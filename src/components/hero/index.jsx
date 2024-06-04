@@ -8,28 +8,31 @@ const Hero = () => {
         <>
             <Header />
 
-            <section className="pt-[35px]">
-               <h1 className="text-center space-y-2">
-                    <span className="block font-subtitle text-primary-muted dark:text-gray-text text-[18px]">
-                        projeto
-                    </span>
-                    <span className="block font-title text-primary dark:text-white-one text-[28px]">
-                        Frontend Fusion
-                    </span>
-                    <span className="block font-subtitle text-primary-muted dark:text-gray-text text-[18px]">
-                        Codifique o seu futuro hoje!
-                    </span>
-               </h1>
-            </section>
+            <div className="mb-[114px] lg:flex lg:justify-between lg:items-center lg:flex-row-reverse lg:mt-[66px] lg:px-[96.5px]">
+                <div>
+                    <section className="pt-[35px]">
+                       <h1 className="text-center text-wrap space-y-2  lg:text-right">
+                            <span className="block font-subtitle text-primary-muted dark:text-gray-text text-[18px] lg:text-[28px]">
+                                projeto
+                            </span>
+                            <span className="block font-title text-primary dark:text-white-one text-[28px] lg:text-[38px]">
+                                Frontend Fusion
+                            </span>
+                            <span className="block font-subtitle text-primary-muted dark:text-gray-text text-[18px] lg:text-[28px]">
+                                Codifique o seu futuro hoje!
+                            </span>
+                       </h1>
+                    </section>
+                    <section className="flex justify-center items-center gap-10 mt-[91px] text-pirmary-muted dark:text-white lg:justify-end">
+                        <LiaReact size={36} className="size-12" />
+                        <TbBrandVite size={36} className="size-12" />
+                        <TbBrandJavascript size={36} className="size-12" />
+                        <TbBrandTailwind size={36} className="size-12" />
+                    </section>
+                </div>
 
-            <section className="flex justify-center items-center gap-10 mt-[91px] text-pirmary-muted dark:text-white">
-                <LiaReact size={36} />
-                <TbBrandVite size={36} />
-                <TbBrandJavascript size={36} />
-                <TbBrandTailwind size={36} />
-            </section>
-
-            <PhotoGrid />
+                <PhotoGrid />
+            </div>
         </>
      );
 }
