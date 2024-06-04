@@ -3,7 +3,7 @@ import Menu from "../hero/components/menu";
 
 const Footer = () => {
     return ( 
-        <footer className="grid grid-rows-2 grid-cols-3 h-[430px] bg-black rounded-t-3xl p-8 gap-x-5">
+        <footer className="grid grid-rows-2 grid-cols-3 h-[430px] bg-black dark:bg-pirmary-muted rounded-t-3xl p-8 gap-x-5">
             <div className="row-span-2 col-span-2 space-y-4">
                 <GitButton primary={false} />
                 <div>
