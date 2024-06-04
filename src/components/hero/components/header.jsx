@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 import Menu from "./menu";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);  
 
   const handleOpenMenu = () => {
     setOpen(!open);
@@ -32,7 +32,7 @@ const Header = () => {
       </header>
 
       {open && (
-        <section className="fixed right-0 h-[100vh] w-[90vw] max-w-[90vw] bg-black p-10 shadow-lg dark:bg-primary">
+        <section className="lg:hidden fixed right-0 h-[100vh] w-[90vw] max-w-md bg-black p-10 shadow-lg dark:bg-primary">
           <div className="mb-5 flex items-center justify-between">
             <h1 className="font-title text-xl text-white-one">
               Frontend Fusion
