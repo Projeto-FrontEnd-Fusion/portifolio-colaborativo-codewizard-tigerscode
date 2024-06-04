@@ -27,7 +27,7 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:block">
-          <Menu />
+          <Menu primary />
         </div>
       </header>
 
