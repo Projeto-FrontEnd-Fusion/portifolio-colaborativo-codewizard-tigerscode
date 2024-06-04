@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Hero from "./components/hero";
 import "./index.css";
+import Footer from "./components/footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <span>[Coloque aqui a sesão de team]</span>
       <span>[Coloque aqui a sesão de aboutProject]</span>
       <span>[Coloque aqui a sesão de coments]</span>
-      <span>[Coloque aqui o cabecalho]</span>
+      <Footer />
     </main>
   </React.StrictMode>
 );
