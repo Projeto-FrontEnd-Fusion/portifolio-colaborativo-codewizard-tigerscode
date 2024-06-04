@@ -11,6 +11,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className="row-span-2 col-span-1">
+                {
+                    //TODO: colocar as imagens quando disponíveis
+                    //TODO: abstrair imagens para extinguir a repetição
+                }
                 <div className="grid grid-cols-2 h-fit">
                     <img className="w-[46.6px] h-[49.25px] rounded-full bg-white-one" />
 
