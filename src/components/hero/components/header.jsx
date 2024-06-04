@@ -28,10 +28,10 @@ const Header = () => {
 
             {
                 open && (
-                    <section className="fixed right-0 max-w-[90vw] w-[90vw] h-[100vh] bg-white-tree shadow-lg p-10">
+                    <section className="fixed right-0 max-w-[90vw] w-[90vw] h-[100vh] bg-white-tree dark:bg-primary shadow-lg p-10">
                         <div className="flex justify-between items-center mb-5 ">
-                            <h1 className="font-title text-xl text-primary">Frontend Fusion</h1>
-                            <button className="cursor-pointer hover:text-gray-text" onClick={handleOpenMenu}>
+                            <h1 className="font-title text-xl text-primary dark:text-white-one">Frontend Fusion</h1>
+                            <button className="cursor-pointer hover:text-gray-text dark:text-white-one" onClick={handleOpenMenu}>
                                 <LuX size={24} />
                             </button>
                         </div>

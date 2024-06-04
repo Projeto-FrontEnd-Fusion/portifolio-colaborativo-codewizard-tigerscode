@@ -1,7 +1,7 @@
 const Menu = () => {
     return ( 
         <nav>
-            <ul className="font-subtitle text-lg text-primary">
+            <ul className="font-subtitle text-lg text-primary dark:text-white-one">
                 <li>
                     <a className="block px-4 py-2 w-full h-full hover:underline" href="#about">Sobre</a>
                 </li>
