@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Hero from "./components/hero";
 import "./index.css";
 import Footer from "./components/footer";
-
 import LangAndTech from "./components/ling-and-tech/LangAndTech"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
