@@ -4,7 +4,7 @@ import Menu from "../hero/components/menu";
 const Footer = () => {
   return (
     <footer className="grid grid-cols-3 grid-rows-2 gap-x-5 rounded-t-3xl bg-black p-8 dark:bg-pirmary-muted">
-      <div className="col-span-2 row-span-2 space-y-4 pb-8 lg:row-span-1 lg:flex lg:space-y-0">
+      <div className="col-span-2 row-span-2 gap-2 space-y-4 pb-8 lg:row-span-1 lg:flex lg:space-y-0">
         <GitButton primary={false} />
         <div>
           <Menu />
@@ -15,18 +15,18 @@ const Footer = () => {
           //TODO: colocar as imagens quando disponíveis
           //TODO: abstrair imagens para extinguir a repetição
         }
-        <div className="grid h-fit grid-cols-2 lg:flex">
-          <img className="h-[49.25px] w-[46.6px] rounded-full bg-white-one" />
+        <div className="grid h-fit justify-end sm:grid-cols-2 lg:flex">
+          <img className="h-[50px] w-[50px] rounded-full bg-white-one" />
 
           <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
 
-          <img className="h-[49.25px] w-[46.6px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
 
-          <img className="h-[49.25px] w-[46.6px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
 
-          <img className="h-[49.25px] w-[46.6px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
 
-          <img className="h-[49.25px] w-[46.6px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
         </div>
 
         <div className="hidden pt-10 font-body text-white-two lg:block">
