@@ -28,10 +28,10 @@ const Hero = () => {
             </h1>
           </section>
           <section className="mt-[91px] flex items-center justify-center gap-10 text-pirmary-muted lg:justify-end dark:text-white">
-            <LiaReact size={36} className="size-12" />
-            <TbBrandVite size={36} className="size-12" />
-            <TbBrandJavascript size={36} className="size-12" />
-            <TbBrandTailwind size={36} className="size-12" />
+            <LiaReact className="size-8 md:size-10 lg:size-12 transition-all duration-1000" />
+            <TbBrandVite className="size-8 md:size-10 lg:size-12 transition-all duration-1000" />
+            <TbBrandJavascript className="size-8 md:size-10 lg:size-12 transition-all duration-1000" />
+            <TbBrandTailwind className="size-8 md:size-10 lg:size-12 transition-all duration-1000" />
           </section>
         </div>
 
