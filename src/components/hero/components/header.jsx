@@ -5,7 +5,7 @@ import ThemeToggle from "./theme-toggle";
 import Menu from "./menu";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);  
+  const [open, setOpen] = useState(false);
 
   const handleOpenMenu = () => {
     setOpen(!open);
@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex h-24 items-center justify-between px-4 lg:flex-row-reverse lg:justify-start lg:gap-8">
+      <header className="flex h-24 items-center justify-between px-4 md:px-[93px] lg:flex-row-reverse lg:justify-start lg:gap-8">
         <GitButton primary />
 
         <div className="flex items-center justify-center gap-3">
@@ -32,7 +32,7 @@ const Header = () => {
       </header>
 
       {open && (
-        <section className="lg:hidden fixed right-0 h-[100vh] w-[90vw] max-w-md bg-black p-10 shadow-lg dark:bg-primary">
+        <section className="fixed right-0 z-50 h-[100vh] w-[90vw] max-w-md bg-black p-10 shadow-lg lg:hidden dark:bg-primary">
           <div className="mb-5 flex items-center justify-between">
             <h1 className="font-title text-xl text-white-one">
               Frontend Fusion
@@ -44,7 +44,7 @@ const Header = () => {
               <LuX size={24} />
             </button>
           </div>
-          <Menu />
+          <Menu hasIcons />
         </section>
       )}
     </>
