@@ -16,17 +16,17 @@ const Footer = () => {
           //TODO: abstrair imagens para extinguir a repetição
         }
         <div className="grid h-fit justify-end sm:grid-cols-2 lg:flex">
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:hover:mr-[18px] transition-all duration-500" />
 
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:ml-[-18px] lg:hover:mr-[18px] transition-all duration-500" />
 
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:ml-[-18px] lg:hover:mr-[18px] transition-all duration-500" />
 
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:ml-[-18px] lg:hover:mr-[18px] transition-all duration-500" />
 
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:ml-[-18px] lg:hover:mr-[18px] transition-all duration-500" />
 
-          <img className="h-[50px] w-[50px] rounded-full bg-white-one lg:ml-[-18px]" />
+          <img className="h-[50px] w-[50px] cursor-pointer rounded-full bg-white-one lg:ml-[-18px]" />
         </div>
 
         <div className="hidden pt-10 font-body text-white-two lg:block">
