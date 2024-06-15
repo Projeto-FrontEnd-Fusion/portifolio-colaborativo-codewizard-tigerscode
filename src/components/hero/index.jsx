@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       <Header />
 
-      <div className="mb-[114px] lg:mt-[66px] lg:flex lg:flex-row-reverse lg:items-center lg:justify-between lg:px-[96.5px]">
+      <div className="mb-[114px] flex flex-col items-center justify-between gap-y-10 lg:mt-[66px] lg:flex-row-reverse lg:px-[93px]">
         <div>
           <section className="pt-[35px]">
             <h1 className="space-y-2 text-wrap text-center lg:text-right">
