@@ -16,18 +16,18 @@ const Hero = () => {
         <div>
           <section className="pt-[35px]">
             <h1 className="space-y-2 text-wrap text-center lg:text-right">
-              <span className="text-primary-muted block font-subtitle text-[18px] lg:text-[28px] dark:text-gray-text">
+              <span className="block font-subtitle text-[18px] text-primary-muted lg:text-[28px] dark:text-gray-text">
                 projeto
               </span>
               <span className="block font-title text-[28px] text-primary lg:text-[38px] dark:text-white-one">
                 Frontend Fusion
               </span>
-              <span className="text-primary-muted block font-subtitle text-[18px] lg:text-[28px] dark:text-gray-text">
+              <span className="block font-subtitle text-[18px] text-primary-muted lg:text-[28px] dark:text-gray-text">
                 Codifique o seu futuro hoje!
               </span>
             </h1>
           </section>
-          <section className="mt-[91px] flex items-center justify-center gap-10 text-pirmary-muted lg:justify-end dark:text-white">
+          <section className="mt-[91px] flex items-center justify-center gap-10 text-primary-muted lg:justify-end dark:text-white">
             <LiaReact className="size-8 transition-all duration-1000 md:size-10 lg:size-12" />
             <TbBrandVite className="size-8 transition-all duration-1000 md:size-10 lg:size-12" />
             <TbBrandJavascript className="size-8 transition-all duration-1000 md:size-10 lg:size-12" />
