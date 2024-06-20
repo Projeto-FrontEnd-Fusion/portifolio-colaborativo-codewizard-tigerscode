@@ -6,8 +6,6 @@ import { TeamContext } from "../../contexts/team-context";
 const Footer = () => {
   const { teamData } = useContext(TeamContext);
 
-  console.log(teamData.people);
-
   return (
     <footer className="dark:bg-primary-muted-muted grid grid-cols-3 grid-rows-2 gap-x-5 rounded-t-3xl bg-black p-8">
       <div className="col-span-2 row-span-2 gap-2 space-y-4 pb-8 lg:row-span-1 lg:flex lg:space-y-0">
