@@ -31,22 +31,20 @@ const Header = () => {
         </div>
       </header>
 
-      {open && (
-        <section className="fixed right-0 z-50 h-[100vh] w-[90vw] max-w-md bg-black p-10 shadow-lg lg:hidden dark:bg-primary">
-          <div className="mb-5 flex items-center justify-between">
-            <h1 className="font-title text-xl text-white-one">
-              Frontend Fusion
-            </h1>
-            <button
-              className="cursor-pointer text-white-one hover:text-gray-text"
-              onClick={handleOpenMenu}
-            >
-              <LuX size={24} />
-            </button>
-          </div>
-          <Menu hasIcons />
-        </section>
-      )}
+      <section
+        className={`fixed ${open ? "right-0" : "-right-full"} z-50 h-[100vh] w-[90vw] max-w-md bg-black p-10 shadow-lg transition-all duration-500 ease-in-out lg:hidden dark:bg-primary`}
+      >
+        <div className="mb-5 flex items-center justify-between">
+          <h1 className="font-title text-xl text-white-one">Frontend Fusion</h1>
+          <button
+            className="cursor-pointer text-white-one hover:text-gray-text"
+            onClick={handleOpenMenu}
+          >
+            <LuX size={24} />
+          </button>
+        </div>
+        <Menu hasIcons />
+      </section>
     </>
   );
 };
