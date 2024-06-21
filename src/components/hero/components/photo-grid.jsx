@@ -1,4 +1,4 @@
-//TODO: colocar as imagens quando disponíveis
+//TODO: colocar as imagens quando todas estiverem disponíveis
 // import { useContext } from "react";
 // import { TeamContext } from "../../../contexts/team-context";
 

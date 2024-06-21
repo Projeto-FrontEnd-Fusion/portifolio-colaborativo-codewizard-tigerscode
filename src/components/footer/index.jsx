@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import GitButton from "../hero/components/git-button";
 import Menu from "../hero/components/menu";
-import { TeamContext } from "../../contexts/team-context";
+import { useTeamStore } from "../../store/useTeamStore";
 
 const Footer = () => {
-  const { teamData } = useContext(TeamContext);
+  const { teamData } = useTeamStore();
 
   return (
     <footer className="dark:bg-primary-muted-muted grid grid-cols-3 grid-rows-2 gap-x-5 rounded-t-3xl bg-black p-8">
