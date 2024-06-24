@@ -1,40 +1,56 @@
 import PropTypes from "prop-types";
+import { FaBookBookmark, FaPeopleGroup, FaTrophy } from "react-icons/fa6";
+import { HiUserGroup } from "react-icons/hi2";
 
-const Menu = ({ primary }) => {
+const Menu = ({ primary, hasIcons }) => {
   return (
     <nav>
-      <ul className={`space-y-4 font-subtitle text-lg lg:flex lg:items-center lg:gap-8 lg:space-y-0 ${primary ? "text-primary dark:text-white-one" : "text-white-one dark:text-white-one"}`}>
-        <li>
-          <a
-            className="block h-full w-full px-4 py-2 hover:underline"
-            href="#about"
-          >
-            Sobre
-          </a>
+      <ul
+        className={`space-y-4 font-subtitle text-lg lg:flex lg:items-center lg:gap-8 lg:space-y-0 ${primary ? "text-primary dark:text-white-one" : "text-white-one dark:text-white-one"}`}
+      >
+        <li className="w-full">
+          <button className="flex w-full items-center justify-start">
+            <a
+              className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
+              href="#about"
+            >
+              {hasIcons && <FaBookBookmark />}
+              Sobre
+            </a>
+          </button>
         </li>
         <li>
-          <a
-            className="block h-full w-full px-4 py-2 hover:underline"
-            href="#team"
-          >
-            Equipe
-          </a>
+          <button className="flex w-full items-center justify-start">
+            <a
+              className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
+              href="#team"
+            >
+              {hasIcons && <HiUserGroup />}
+              Equipe
+            </a>
+          </button>
         </li>
         <li>
-          <a
-            className="block h-full w-full px-4 py-2 hover:underline"
-            href="#benefits"
-          >
-            Vantagens
-          </a>
+          <button className="flex w-full items-center justify-start">
+            <a
+              className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
+              href="#benefits"
+            >
+              {hasIcons && <FaTrophy />}
+              Vantagens
+            </a>
+          </button>
         </li>
         <li>
-          <a
-            className="block h-full w-full px-4 py-2 hover:underline"
-            href="#participants"
-          >
-            Participantes
-          </a>
+          <button className="flex w-full items-center justify-start">
+            <a
+              className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
+              href="#participants"
+            >
+              {hasIcons && <FaPeopleGroup />}
+              Participantes
+            </a>
+          </button>
         </li>
       </ul>
     </nav>
@@ -43,10 +59,12 @@ const Menu = ({ primary }) => {
 
 Menu.propTypes = {
   primary: PropTypes.bool,
+  hasIcons: PropTypes.bool,
 };
 
 Menu.defaultProps = {
   primary: false,
+  hasIcons: false,
 };
 
 export default Menu;

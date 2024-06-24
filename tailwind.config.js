@@ -19,7 +19,7 @@ export default {
       },
       colors: {
         'primary': '#0F0920',
-        'pirmary-muted': '#221C3E',
+        'primary-muted': '#221C3E',
         'white-one': '#F2F0FF',
         'white-two': '#EBEBEB',
         'white-tree': '#E1E1E1',
