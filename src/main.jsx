@@ -15,5 +15,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <span>[Coloque aqui a sesão de coments]</span>
       <Footer />
     </main>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
