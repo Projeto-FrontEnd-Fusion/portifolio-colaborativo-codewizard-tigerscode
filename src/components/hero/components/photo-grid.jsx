@@ -1,39 +1,53 @@
+import { useState } from "react";
+import { useTeamStore } from "../../../store/useTeamStore";
+import PhotoGridSkeleton from "./photo-grid-skeleton";
+
 const PhotoGrid = () => {
+  const { teamData, isLoading } = useTeamStore();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  }
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  }
+
   return (
-    <section className="m-auto mt-[43px] grid w-[344px] grid-cols-4 grid-rows-6 gap-2 py-[15px] lg:m-0 lg:w-[688px] lg:gap-4">
+    <section className="w-full md:px-20 lg:w-auto lg:px-0 lg:py-20">
       {
-        //TODO: colocar as imagens quando disponíveis
+        isLoading && (
+          <PhotoGridSkeleton />
+        )
       }
-      <div className="row-span-6 self-center">
-        <img 
-            className="h-[95px] w-20 rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
-      </div>
-
-      <div className="row-span-6 space-y-2 self-center lg:space-y-4 lg:pb-[116px]">
-        <img 
-            className="col-span-1 row-span-3 h-[95px] w-20 self-center rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
-
-        <img 
-            className="col-span-1 col-start-2 row-span-3 h-[95px] w-20 self-center rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
-      </div>
-
-      <div className="row-span-6 space-y-2 self-center pt-[15px] lg:space-y-4 lg:pt-[118px]">
-        <img 
-            className="col-span-1 row-span-3 h-[95px] w-20 self-center rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
-
-        <img 
-            className="col-span-1 col-start-2 row-span-3 h-[95px] w-20 self-center rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
-      </div>
-
-      <div className="row-span-6 self-center pt-[26px]">
-        <img 
-            className="h-[95px] w-20 rounded-2xl bg-[#C8C8C8] object-cover lg:h-[190px] lg:w-40 lg:rounded-[32px] dark:bg-[#221C3E]" 
-        />
+      
+      <div className="grid grid-flow-col grid-cols-4 items-center gap-2 py-0 md:gap-3 lg:gap-4">
+        {
+          teamData?.people?.map((person, index) => (
+            <div
+              key={index}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+              className={
+                `relative aspect-[80/95] min-w-14 max-w-40
+                ${index === 0 && "row-span-2"} 
+                ${index === 1 || index === 2 ? "lg:bottom-20" : ""} 
+                ${index === 3 || index === 4 ? "top-4 lg:top-10" : ""} 
+                ${index === 5 && "top-4 lg:top-0 lg:block"}`
+              }
+            >
+              <img
+                src={person.githubImgUrl}
+                alt={person.name}
+                className={
+                  `h-full w-full rounded-2xl object-cover cursor-pointer lg:rounded-[32px] transition-all duration-500 ease-in-out
+                  ${ hoveredIndex === null ? "" : index === hoveredIndex ? "scale-105 shadow-lg" : "grayscale" }`
+                }
+              />
+            </div>
+          ))
+        }
       </div>
     </section>
   );

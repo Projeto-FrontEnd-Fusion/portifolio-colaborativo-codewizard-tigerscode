@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import plugin from 'tailwindcss/plugin'
-
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: 'selector',
@@ -10,6 +8,7 @@ export default {
       'title': 'Zen Dots, sans-serif',
       'subtitle': 'Inconsolata, monospace',
       'body': 'Mulish, sans-serif',
+      'body-two': 'Montserrat, sans-serif',
     },
     extend: {
       backgroundColor: {
@@ -20,7 +19,7 @@ export default {
       },
       colors: {
         'primary': '#0F0920',
-        'pirmary-muted': '#221C3E',
+        'primary-muted': '#221C3E',
         'white-one': '#F2F0FF',
         'white-two': '#EBEBEB',
         'white-tree': '#E1E1E1',
@@ -29,23 +28,5 @@ export default {
       },
     },
   },
-  plugins: [
-    plugin(function({ addUtilities }) {
-      addUtilities({
-        '.github-button': {
-          'width': '128px',
-          'height': '48px',
-          'border-radius': '8px',
-          'display': 'flex',
-          'align-items': 'center',
-          'justify-content': 'center',
-          'gap': '8px',
-          'cursor': 'pointer',
-          'font-family': 'Montserrat, sans-serif',
-          'font-size': '16px',
-          'font-weight': '700',
-        },
-      })
-    })
-  ],
+  plugins: [],
 };
