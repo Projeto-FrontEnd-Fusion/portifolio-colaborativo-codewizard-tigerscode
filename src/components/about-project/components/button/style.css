@@ -1,0 +1,8 @@
+.aboutProject__Cta a{
+    @apply
+        mt-10
+        mb-10
+        text-white
+        rounded-lg
+    ;
+}

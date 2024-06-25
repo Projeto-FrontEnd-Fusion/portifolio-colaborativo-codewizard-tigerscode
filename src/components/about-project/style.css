@@ -1,0 +1,126 @@
+.aboutProject{
+    @apply
+        bg-[#0f0920]
+        w-full
+        flex
+        items-center
+        justify-center
+        py-10
+        px-5
+        md:px-0
+    ;
+}
+
+.aboutProject :where(h2, h3, p){
+    @apply
+        text-white
+    ;
+}
+
+.aboutProject__Header{
+    @apply
+        py-5
+    ;
+}
+
+.aboutProject__Header :where(h2, p){
+    @apply
+        text-center
+        mt-10
+        mb-10
+    ;
+}
+
+.aboutProject__Header h2{
+    @apply
+        font-bold
+        text-[30px]
+        lg:text-[36px]
+    ;
+}
+
+.aboutProject__Header p{
+    @apply
+        text-[18px]
+        lg:text-[22px]
+    ;
+}
+
+.aboutProject__Card{
+    @apply
+        bg-[#221C3E]
+        mt-16
+        mb-16
+        py-10
+        px-8
+        lg:px-16
+        min-h-60
+        flex
+        items-start
+        lg:items-center
+        justify-center
+        lg:justify-start
+        flex-col
+        lg:flex-row
+    ;
+}
+
+.aboutProject__Card--Text{
+    @apply
+        lg:px-10
+        w-full
+    ;
+}
+
+.aboutProject__Card--Text :where(h3, p){
+    @apply
+        mt-0
+        mb-0
+        text-left
+        text-white
+    ;
+}
+
+.aboutProject__Card--Text h3{
+    @apply
+        text-[18px]
+        lg:text-[20px]
+        font-medium
+    ;
+}
+
+.aboutProject__Card--Text p{
+    @apply
+        text-[16px]
+        lg:text-[18px]
+    ;
+}
+
+.aboutProject__Card--Img{
+    @apply
+        w-[64px]
+    ;
+}
+
+.aboutProject__Card img{
+    @apply
+        w-[64px]
+        h-[64px]
+        mb-5
+        lg:mb-0
+    ;
+}
+
+.aboutProject__Cta{
+    @apply
+        py-10
+        px-5
+        lg:px-64
+        text-[26px]
+        text-center
+        flex
+        flex-col
+        items-center
+        justify-center
+    ;
+}
