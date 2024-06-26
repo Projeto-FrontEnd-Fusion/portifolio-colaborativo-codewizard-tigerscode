@@ -11,12 +11,12 @@ import Git from "../../assets/git.svg";
 
 function LangAndTech() {
   return (
-    <div className="flex flex-col w-full min-h-screen justify-center items-center bg-[#0f0920]">
+    <div className="flex flex-col w-full min-h-screen justify-center items-center">
       <div className="flex flex-col justify-center items-center pb-8">
-        <h1 className="font-inconsolata text-[22px] md:text-[31px] text-white pb-4">
+        <h1 className="font-subtitle text-[22px] md:text-[31px] text-black dark:text-white-two pb-4">
           Linguagens e Tecnologias
         </h1>
-        <div className="w-[306px] md:w-[512px] h-[2px] bg-[#EBEBEB]"></div>
+        <div className="w-[306px] md:w-[512px] h-[2px] bg-[#0F0920] dark:bg-white-two "></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
         <Card title="Html" src={Html} alt="Html icon" />
