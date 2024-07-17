@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Hero from "./components/hero";
 import "./index.css";
 import Footer from "./components/footer";
+import Coments from "./components/coments"
 
 import LangAndTech from "./components/ling-and-tech/LangAndTech"
 
@@ -14,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <LangAndTech/>
       <span>[Coloque aqui a sesão de team]</span>
       <span>[Coloque aqui a sesão de aboutProject]</span>
-      <span>[Coloque aqui a sesão de coments]</span>
+      <Coments/>
       <Footer />
     </main>
   </React.StrictMode>
