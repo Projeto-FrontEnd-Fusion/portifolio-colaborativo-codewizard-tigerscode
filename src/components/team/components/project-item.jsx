@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const ProjectItem = ({ imgUrl }) => {
   return (
-    <div className="h-[210px] w-[303px] rounded-lg">
+    <div className="h-[210px] min-w-[303px] rounded-lg">
       <img
         src={imgUrl}
         alt="Projetos Recentes"
