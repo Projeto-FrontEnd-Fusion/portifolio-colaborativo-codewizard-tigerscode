@@ -26,46 +26,47 @@ const TeamMemberItem = ({ person }) => {
     setIsProjectsSectionOpen(false);
   };
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="h-[150px] w-[150px]">
-        <img
-          src={`${person.githubImgUrl}`}
-          alt={person.name}
-          className="h-full w-full rounded-2xl object-cover"
-          loading="lazy"
-        />
+    <div className="flex flex-col items-center gap-4 lg:gap-16 lg:items-start">
+      <div className="flex flex-col items-center gap-4 lg:flex-row w-full lg:gap-x-8">
+        <div className="h-[150px] w-[150px] lg:min-w-[256px] lg:min-h-[256px]">
+          <img
+            src={`${person.githubImgUrl}`}
+            alt={person.name}
+            className="h-full w-full rounded-2xl object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex flex-col items-center gap-4 lg:items-start lg:max-h-60">
+          <h2 className="text-center font-subtitle text-[38px] text-primary dark:text-[#03FCFC]">
+            {firstName} {secondName}
+          </h2>
+          <h3 className="font-body text-[22px] text-primary dark:text-white-two">{person.subTitle}</h3>
+
+          <div className="flex gap-4">
+            {person.githubUrl && (
+              <SocialMediaButton url={person.githubUrl}>
+                <VscGithubAlt className="text-white dark:text-primary lg:size-5" />
+              </SocialMediaButton>
+            )}
+            {person.linkedinUrl && (
+              <SocialMediaButton url={person.linkedinUrl}>
+                <CiLinkedin className="text-white dark:text-primary lg:size-5" />
+              </SocialMediaButton>
+            )}
+            {person.instagramUrl && (
+              <SocialMediaButton url={person.instagramUrl}>
+                <IoLogoInstagram className="text-white dark:text-primary lg:size-5" />
+              </SocialMediaButton>
+            )}
+            {person.facebookUrl && (
+              <SocialMediaButton url={person.facebookUrl}>
+                <SlSocialFacebook className="text-white dark:text-primary lg:size-5" />
+              </SocialMediaButton>
+            )}
+          </div>
+          <p className="text-center text-ellipsis overflow-clip lg:text-left font-body text-primary-muted dark:text-white-two lg:text-lg lg:leading-none">{person.text}</p>
+        </div>
       </div>
-
-      <h2 className="text-center font-subtitle text-[38px] text-primary dark:text-[#03FCFC]">
-        {firstName} {secondName}
-      </h2>
-
-      <h3 className="font-body text-[22px] text-primary dark:text-white-two">{person.subTitle}</h3>
-
-      <div className="flex gap-4">
-        {person.githubUrl && (
-          <SocialMediaButton url={person.githubUrl}>
-            <VscGithubAlt className="text-white dark:text-primary" />
-          </SocialMediaButton>
-        )}
-        {person.linkedinUrl && (
-          <SocialMediaButton url={person.linkedinUrl}>
-            <CiLinkedin className="text-white dark:text-primary" />
-          </SocialMediaButton>
-        )}
-        {person.instagramUrl && (
-          <SocialMediaButton url={person.instagramUrl}>
-            <IoLogoInstagram className="text-white dark:text-primary" />
-          </SocialMediaButton>
-        )}
-        {person.facebookUrl && (
-          <SocialMediaButton url={person.facebookUrl}>
-            <SlSocialFacebook className="text-white dark:text-primary" />
-          </SocialMediaButton>
-        )}
-      </div>
-
-      <p className="text-center font-body text-primary-muted dark:text-white-two">{person.text}</p>
 
       <div className="flex gap-2">
         <ToggleSectionButton
@@ -82,7 +83,7 @@ const TeamMemberItem = ({ person }) => {
         </ToggleSectionButton>
       </div>
 
-      <div className="flex w-full gap-3 overflow-x-scroll scroll-smooth snap-x [&::-webkit-scrollbar]:hidden">
+      <div className="flex lg:flex-wrap lg:justify-between lg:gap-y-8 w-full gap-3 overflow-x-scroll scroll-smooth snap-x [&::-webkit-scrollbar]:hidden lg:overflow-visible">
         {isProjectsSectionOpen && (
            person.projects.length > 0 ? (
             person.projects.map((project) => (
@@ -96,7 +97,7 @@ const TeamMemberItem = ({ person }) => {
         )}
 
         {isSkillsSectionOpen && memberSkills && memberSkills.skills.map(skill => (
-          <div key={skill.name} className=" flex items-center min-w-40 justify-center gap-2 h-12 text-nowrap w-auto rounded-full dark:bg-primary-muted bg-primary text-white" >
+          <div key={skill.name} className=" flex items-center min-w-40 justify-center gap-2 h-12 text-nowrap w-auto rounded-full bg-primary-muted text-white hover:bg-[#454343] transition-colors duration-500" >
             <img src={skill.icon} alt={skill.name} className="h-8 w-8" />
             <span className="text-lg">{skill.name}</span>
           </div>

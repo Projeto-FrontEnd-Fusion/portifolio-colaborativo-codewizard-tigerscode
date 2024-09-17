@@ -9,7 +9,7 @@ const ToggleSectionButton = ({
   console.log(isActive)
   return (
     <button
-      className={`h-[35px] min-h-[35px] w-auto min-w-[154px] text-nowrap rounded-[4px] px-2 font-subtitle text-white transition-colors duration-500 hover:bg-btn-secondary ${isActive ? "bg-primary dark:bg-btn-primary" : "dark:bg-primary-muted bg-btn-primary"}`}
+      className={`h-[35px] min-h-[35px] w-auto min-w-[132px] text-nowrap rounded-[4px] px-2 font-subtitle text-white transition-colors duration-500 hover:bg-btn-secondary ${isActive ? "bg-primary dark:bg-btn-primary" : "dark:bg-primary-muted bg-btn-primary"}`}
       onClick={handleToggleSectionClick}
     >
       {children}
