@@ -14,9 +14,8 @@ const TeamMemberItem = ({ person }) => {
   const [isSkillsSectionOpen, setIsSkillsSectionOpen] = useState(false);
 
   const firstName = person.name.split(" ")[0];
+  const secondName = person.name.split(" ")[1];
   const memberSkills = teamMemberSkills.find(member => member.name === firstName);
-
-  console.log(memberSkills)
 
   const handleProjectsButtonClick = () => {
     setIsProjectsSectionOpen(!isProjectsSectionOpen);
@@ -37,36 +36,36 @@ const TeamMemberItem = ({ person }) => {
         />
       </div>
 
-      <h2 className="text-center font-subtitle text-[38px] text-primary">
-        {person.name}
+      <h2 className="text-center font-subtitle text-[38px] text-primary dark:text-[#03FCFC]">
+        {firstName} {secondName}
       </h2>
 
-      <h3 className="font-body text-[22px] text-primary">{person.subTitle}</h3>
+      <h3 className="font-body text-[22px] text-primary dark:text-white-two">{person.subTitle}</h3>
 
       <div className="flex gap-4">
         {person.githubUrl && (
           <SocialMediaButton url={person.githubUrl}>
-            <VscGithubAlt color="#FFF" />
+            <VscGithubAlt className="text-white dark:text-primary" />
           </SocialMediaButton>
         )}
         {person.linkedinUrl && (
           <SocialMediaButton url={person.linkedinUrl}>
-            <CiLinkedin color="#FFF" />
+            <CiLinkedin className="text-white dark:text-primary" />
           </SocialMediaButton>
         )}
         {person.instagramUrl && (
           <SocialMediaButton url={person.instagramUrl}>
-            <IoLogoInstagram color="#FFF" />
+            <IoLogoInstagram className="text-white dark:text-primary" />
           </SocialMediaButton>
         )}
         {person.facebookUrl && (
           <SocialMediaButton url={person.facebookUrl}>
-            <SlSocialFacebook color="#FFF" />
+            <SlSocialFacebook className="text-white dark:text-primary" />
           </SocialMediaButton>
         )}
       </div>
 
-      <p className="text-center font-body">{person.text}</p>
+      <p className="text-center font-body text-primary-muted dark:text-white-two">{person.text}</p>
 
       <div className="flex gap-2">
         <ToggleSectionButton
@@ -97,7 +96,7 @@ const TeamMemberItem = ({ person }) => {
         )}
 
         {isSkillsSectionOpen && memberSkills && memberSkills.skills.map(skill => (
-          <div key={skill.name} className=" flex items-center min-w-40 justify-center gap-2 h-12 text-nowrap w-auto rounded-full bg-primary text-white" >
+          <div key={skill.name} className=" flex items-center min-w-40 justify-center gap-2 h-12 text-nowrap w-auto rounded-full dark:bg-primary-muted bg-primary text-white" >
             <img src={skill.icon} alt={skill.name} className="h-8 w-8" />
             <span className="text-lg">{skill.name}</span>
           </div>

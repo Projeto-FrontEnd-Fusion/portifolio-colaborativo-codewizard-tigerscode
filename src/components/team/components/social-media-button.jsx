@@ -5,7 +5,7 @@ const SocialMediaButton = ({ children, url }) => {
     <a
       href={url}
       target="_blank"
-      className="flex h-12 w-12 items-center justify-center rounded-full bg-[#454343] transition-all duration-500 hover:scale-105 hover:bg-primary"
+      className="flex h-12 w-12 items-center justify-center rounded-full bg-[#454343] transition-all duration-500 hover:scale-105 hover:bg-primary cursor-pointer dark:bg-btn-primary"
     >
       {children}
     </a>
