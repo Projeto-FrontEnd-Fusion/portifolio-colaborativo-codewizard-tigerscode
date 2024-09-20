@@ -8,6 +8,8 @@ import Coments from "./components/coments"
 
 import Benefits from "./components/benefits"
 import LangAndTech from "./components/ling-and-tech/LangAndTech"
+import Team from "./components/team";
+import Participate from "./components/participate";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,8 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Hero />
       <Benefits />
       <LangAndTech/>
-      <span>[Coloque aqui a sesão de team]</span>
-      <span>[Coloque aqui a sesão de aboutProject]</span>
+      <Team />
+      <Participate />
       <Coments/>
       <Footer />
     </main>
