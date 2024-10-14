@@ -16,7 +16,7 @@ export default function Form() {
     const newComment = {
       id: uuidv4(),
       name: name.current.value,
-      githubUser: "DaviSC17",
+      githubUser: "DaviSC17", // Você pode querer alterar isso para coletar o nome do usuário
       email: email.current.value,
       comment: comment.current.value,
       createDate: new Date(),
@@ -36,7 +36,6 @@ export default function Form() {
             className="border-btn-secondary focus: h-[56px] w-[324px] rounded-[8px] border-[1px] px-[32px] py-[10px] text-white-two outline-none md:w-[295px] dark:bg-dark-bg"
           ></input>
           <div className="dark:bg-dark-bg-two hidden md:flex md:h-[56px] md:w-[160px] md:items-center md:justify-center md:gap-1 md:rounded-[8px] md:bg-dark-bg md:p-1">
-            {" "}
             <FaRegCircleUser className="md:text-light-bg hidden text-white-two md:block dark:text-white-two" />
             <button className="hidden text-white-two md:block dark:text-white-two">
               Upload
@@ -60,7 +59,7 @@ export default function Form() {
               onClick={handlePost}
               className="h-[36px] w-[105px] rounded-[8px] bg-btn-secondary text-[18px] dark:bg-btn-primary dark:text-white-two"
             >
-             {loading ? "Enviando..." : "Confirmar"}
+              {loading ? "Enviando..." : "Confirmar"}
             </button>
             <button className="border-btn-secondary dark:border-btn-primary h-[36px] w-[105px] rounded-[8px] border-[1px] text-[18px] dark:text-white-two">
               Limpar

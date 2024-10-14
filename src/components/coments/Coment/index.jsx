@@ -13,7 +13,7 @@ export default function Coment(){
     return(
         <>
             <div className="container_coment">
-                <p className="font-body text-dark-bg text-base w-80 h-40 dark:text-white-two">
+                <p className="font-body text-dark-bg text-base  dark:text-white-two">
                     {coment.content}
                 </p>
             </div>
