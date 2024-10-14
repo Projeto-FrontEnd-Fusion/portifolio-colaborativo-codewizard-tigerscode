@@ -1,5 +1,6 @@
 import Card from "./Card";
 import PostComent from "./post_you_coment";
+
 export default function App() {
   return (
     <>
@@ -7,13 +8,9 @@ export default function App() {
         Comentários e avaliações
       </h2>
       <div className="container_section_coments mb-2 flex flex-wrap justify-center gap-4 p-3">
-        {[...Array(3)].map((cards) => {
-          return <Card />;
-        })}
+        <Card />
       </div>
-      <div className="">
-        <PostComent />
-      </div>
+      <PostComent />
     </>
   );
 }

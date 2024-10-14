@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { FaBookBookmark, FaPeopleGroup, FaTrophy } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi2";
+import scrollTo from "../../../utils/scrollUtils";
 
 const Menu = ({ primary, hasIcons }) => {
   return (
@@ -13,6 +14,7 @@ const Menu = ({ primary, hasIcons }) => {
             <a
               className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
               href="#about"
+              onClick={scrollTo}
             >
               {hasIcons && <FaBookBookmark />}
               Sobre
@@ -24,6 +26,7 @@ const Menu = ({ primary, hasIcons }) => {
             <a
               className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
               href="#team"
+              onClick={scrollTo}
             >
               {hasIcons && <HiUserGroup />}
               Equipe
@@ -35,6 +38,7 @@ const Menu = ({ primary, hasIcons }) => {
             <a
               className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
               href="#benefits"
+              onClick={scrollTo}
             >
               {hasIcons && <FaTrophy />}
               Vantagens
@@ -46,6 +50,7 @@ const Menu = ({ primary, hasIcons }) => {
             <a
               className="flex h-full w-full items-center gap-4 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-btn-primary"
               href="#participants"
+              onClick={scrollTo}
             >
               {hasIcons && <FaPeopleGroup />}
               Participantes

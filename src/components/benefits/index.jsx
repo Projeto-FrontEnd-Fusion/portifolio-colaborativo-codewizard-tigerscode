@@ -46,7 +46,7 @@ Card.propTypes = {
 
 const Beneficios = () => {
   return (
-    <div className="flex items-center justify-center font-body dark:font-body">
+    <div className="flex items-center justify-center font-body dark:font-body" id="benefits">
       <div className="mb-20 mt-8 flex flex-wrap justify-center gap-4">
         <Card
           title="Vantagens do Projeto"

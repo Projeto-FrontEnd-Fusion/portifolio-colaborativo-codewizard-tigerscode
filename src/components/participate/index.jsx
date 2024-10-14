@@ -2,7 +2,7 @@ import CardItem from "./components/card-item";
 
 const Participate = () => {
   return (
-    <div className="mb-[270px] px-8 lg:px-[100px] dark:text-white">
+    <div className="mb-[270px] px-8 lg:px-[100px] dark:text-white" id="about">
       <div className="mb-20 space-y-4">
         <h2 className="text-center font-body text-[28px] font-black lg:text-[48px]">
           Sobre o Projeto Frontend Fusion
@@ -36,7 +36,7 @@ const Participate = () => {
         />
       </div>
 
-      <div className="mx-auto mt-[180px] flex w-full max-w-[750px] flex-col items-center gap-4 lg:gap-10">
+      <div className="mx-auto mt-[180px] flex w-full max-w-[750px] flex-col items-center gap-4 lg:gap-10" id="participants">
         <p className="text-center font-body text-primary lg:text-[32px] dark:text-white">
           Estamos ansiosos para receber sua inscrição e dar as boas-vindas a
           você em nossa comunidade!
