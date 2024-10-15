@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { LuGithub } from "react-icons/lu";
 
 const GitButton = ({ primary }) => {
@@ -11,6 +10,8 @@ const GitButton = ({ primary }) => {
         target="_blank"
         rel="nofollow"
         className="flex items-center gap-[10px]"
+        aria-label="Open GitHub Repository"
+        title="Ir Para o Github"
       >
         <span>github</span>
         <LuGithub size={16} strokeWidth={3} />

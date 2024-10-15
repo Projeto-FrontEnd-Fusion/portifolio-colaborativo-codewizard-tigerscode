@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { FaBookBookmark, FaPeopleGroup, FaTrophy } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi2";
 import scrollTo from "../../../utils/scrollUtils";
@@ -53,7 +52,7 @@ const Menu = ({ primary, hasIcons }) => {
               onClick={scrollTo}
             >
               {hasIcons && <FaPeopleGroup />}
-              Participantes
+              Participe
             </a>
           </button>
         </li>
