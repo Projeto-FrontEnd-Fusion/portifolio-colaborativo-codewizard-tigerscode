@@ -1,7 +1,6 @@
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import Coments from "./components/coments"
-
 import Benefits from "./components/benefits"
 import LangAndTech from "./components/ling-and-tech/LangAndTech"
 import Team from "./components/team";

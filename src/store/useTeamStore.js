@@ -15,7 +15,7 @@ export const useTeamStore = create((set) => ({
 
             set({ teamData: data });
         } catch (error) {
-            console.log("Error fetching data", error);
+            return null
         } finally {
             set({ isLoading: false });
         }
