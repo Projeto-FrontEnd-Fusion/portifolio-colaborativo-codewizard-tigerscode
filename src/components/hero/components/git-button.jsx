@@ -19,12 +19,4 @@ const GitButton = ({ primary }) => {
   );
 };
 
-GitButton.propTypes = {
-  primary: PropTypes.bool,
-};
-
-GitButton.defaultProps = {
-  primary: false,
-};
-
 export default GitButton;
