@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useTeamStore } from "../../../store/useTeamStore";
 import PhotoGridSkeleton from "./photo-grid-skeleton";
+import { useFetchMembers } from "../../../hooks/useFetchMembers";
 
 const PhotoGrid = () => {
-  const { teamData, isLoading } = useTeamStore();
+
+  const {data, isLoading} = useFetchMembers()
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -24,7 +26,7 @@ const PhotoGrid = () => {
       
       <div className="grid grid-flow-col grid-cols-4 items-center gap-2 py-0 md:gap-3 lg:gap-4">
         {
-          teamData?.people?.map((person, index) => (
+          data?.people?.map((person, index) => (
             <div
               key={index}
               onMouseEnter={() => handleMouseEnter(index)}
