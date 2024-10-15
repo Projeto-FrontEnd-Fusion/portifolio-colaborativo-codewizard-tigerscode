@@ -13,7 +13,7 @@ export function useAxiosGet(url) {
           })
           .then((response) => setResponse(response.data));
       } catch (error) {
-        console.log(error);
+       return
       }
     };
 

@@ -16,7 +16,7 @@ export function useAxiosPost(url) {
           location.reload();
         }
       })
-      .catch((error) => console.log(`Erro encontrado: ${error}`));
+      .catch((error) => console.error(`Erro encontrado: ${error}`));
   }
   return { PostComments, loading };
 }
