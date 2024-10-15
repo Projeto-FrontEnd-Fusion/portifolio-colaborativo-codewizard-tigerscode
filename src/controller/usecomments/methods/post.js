@@ -1,4 +1,4 @@
-export const postOneComments  = async (api) =>{
-  const reponse = api.post("api/comments");
+export const postOneComments = async (api, data) =>{
+  const reponse = await api.post("api/comments", data);
   return reponse.data
 }

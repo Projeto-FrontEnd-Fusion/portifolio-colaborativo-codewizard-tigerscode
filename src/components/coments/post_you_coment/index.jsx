@@ -1,6 +1,7 @@
 import Card__btn from "../Card__btn";
 import Coment from "../Coment";
-import Form from "../Form";
+import { Form } from "../Form";
+
 import User from "../User";
 
 export default function PostComent() {

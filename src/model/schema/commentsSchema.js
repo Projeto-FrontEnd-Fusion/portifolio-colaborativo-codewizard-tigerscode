@@ -1,16 +1,16 @@
-import * as Yup from "yup"
+import * as Yup from "yup";
 
 export const SchemaComments = Yup.object().shape({
-  nome: Yup.string()
+  name: Yup.string()
     .required('Nome é obrigatório'),
-  
-  githubuser: Yup.string()
+
+  githubUser: Yup.string()
     .required('Usuário do GitHub é obrigatório'),
-  
+
   email: Yup.string()
     .email('Email inválido')
     .required('Email é obrigatório'),
-  
-  comentario: Yup.string()
+
+  comment: Yup.string()
     .required('Comentário é obrigatório')
-}) 
+});
