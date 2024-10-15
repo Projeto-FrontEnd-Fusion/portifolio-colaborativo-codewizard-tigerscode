@@ -62,14 +62,4 @@ const Menu = ({ primary, hasIcons }) => {
   );
 };
 
-Menu.propTypes = {
-  primary: PropTypes.bool,
-  hasIcons: PropTypes.bool,
-};
-
-Menu.defaultProps = {
-  primary: false,
-  hasIcons: false,
-};
-
 export default Menu;

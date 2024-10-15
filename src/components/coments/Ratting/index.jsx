@@ -14,7 +14,7 @@ export default function Ratting(props){
                 const currencyRating = index + 1;
                 return(
                    
-                    <label >
+                    <label key={index} >
                         <input 
                         type="radio" 
                         nome="rate"

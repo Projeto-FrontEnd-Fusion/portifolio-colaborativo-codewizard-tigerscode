@@ -3,7 +3,6 @@ import CollabIcon from "../../assets/iconcollab.svg";
 import SafeIcon from "../../assets/iconsafe.svg";
 import TaskIcon from "../../assets/icontask.svg";
 import ViewIcon from "../../assets/iconview.svg";
-import PropTypes from "prop-types";
 
 const Card = ({ title, subtitle, icon, hasShadow, isSpecial }) => {
   return (
@@ -36,13 +35,7 @@ const Card = ({ title, subtitle, icon, hasShadow, isSpecial }) => {
   );
 };
 
-Card.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  icon: PropTypes.Image,
-  hasShadow: PropTypes.Boolean,
-  isSpecial: PropTypes.Boolean,
-};
+
 
 const Beneficios = () => {
   return (
