@@ -3,6 +3,10 @@ import PhotoGridSkeleton from "./photo-grid-skeleton";
 import { useFetchMembers } from "../../../hooks/useFetchMembers";
 
 const PhotoGrid = () => {
+/*
+A função handleMouseEnter e handleMouseLeave, assim como a criação do estado hoveredIndex, podem ser substituídas pela utilização da classe "group" do Tailwind CSS. Isso elimina a necessidade de scripts adicionais e reduz a quantidade de código no arquivo (photo-grid.jsx).
+*/
+
 
   const {data, isLoading} = useFetchMembers()
 

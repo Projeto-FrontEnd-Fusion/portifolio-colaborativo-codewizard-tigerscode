@@ -9,7 +9,6 @@ import PhotoGrid from "./components/photo-grid";
 
 const Hero = () => {
 
-
   return (
     <>
       <Header />
