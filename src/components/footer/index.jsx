@@ -1,10 +1,11 @@
+import { useTeamStore } from "../../store/useTeamStore";
 import GitButton from "../hero/components/git-button";
 import Menu from "../hero/components/menu";
-import { useFetchMembers } from "../../hooks/useFetchMembers";
 
 const Footer = () => {
-const {data} = useFetchMembers()
+  const { teamData, isLoading } = useTeamStore();
 
+  if (isLoading) return <span>Carregando...</span>;
 
   return (
     <footer className="dark:bg-primary-muted-muted grid grid-cols-3 grid-rows-2 gap-x-5 rounded-t-3xl bg-black p-8">
@@ -20,7 +21,7 @@ const {data} = useFetchMembers()
           //TODO: abstrair imagens para extinguir a repetição
         }
         <div className="grid h-fit justify-end sm:grid-cols-2 lg:flex">
-          {data?.people?.map((person, item) => (
+          {teamData?.people?.map((person, item) => (
             <img
               key={item}
               src={person.githubImgUrl}
@@ -32,7 +33,7 @@ const {data} = useFetchMembers()
 
         <div className="hidden pt-10 font-body text-white-two lg:block">
           <ul>
-            {data?.people?.map((person, index) => (
+            {teamData?.people?.map((person, index) => (
               <li key={index}>
                 {person.name} - {person.subTitle || "Não informado"}
               </li>
