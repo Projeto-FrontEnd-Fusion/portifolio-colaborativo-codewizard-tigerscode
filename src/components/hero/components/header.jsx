@@ -7,9 +7,10 @@ import Menu from "./menu";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const handleOpenMenu = () => {
-    setOpen(!open);
-  };
+  // const handleOpenMenu = () => {
+  //   setOpen(!open);
+  // };
+  // usando a sintaxe (prev => !prev) , evitar criar uma função , e reduz a quantidade de código
 
   return (
     <>
@@ -20,7 +21,7 @@ const Header = () => {
           <ThemeToggle />
           <button
             className="text-black hover:text-gray-text lg:hidden dark:text-white-two"
-            onClick={handleOpenMenu}
+            onClick={() => setOpen((prev) => !prev)}
           >
             <LuMenu size={36} />
           </button>
@@ -38,7 +39,7 @@ const Header = () => {
           <h1 className="font-title text-xl text-white-one">Frontend Fusion</h1>
           <button
             className="cursor-pointer text-white-one hover:text-gray-text"
-            onClick={handleOpenMenu}
+            onClick={() => setOpen((prev) => !prev)}
           >
             <LuX size={24} />
           </button>
