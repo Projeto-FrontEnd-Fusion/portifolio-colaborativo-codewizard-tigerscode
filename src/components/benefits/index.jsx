@@ -1,9 +1,23 @@
+
+/*
+Problema 1: Não é recomendado ter dois componentes no mesmo arquivo, pensando na manutenção do código.
+Melhoria 1: Separar os componentes "Card" e "Benefícios" (renomear "Benefícios" para "Benefits", em inglês).
+
+Problema 2: O componente "Card" dentro de "Benefits" está em hard-code, o que prejudica a manutenabilidade, pois os dados podem mudar.
+Melhoria 2: É recomendável criar um array de objetos contendo as propriedades do card (title, subtitle, etc.) e utilizar o método map para renderizá-los dinamicamente.
+
+Problema 3: O uso das variáveis "hasShadow" e "isSpecial" não está claro ou elas não têm função.
+Melhoria 3: Remover essas variáveis do código ou refatorá-las para que sejam responsáveis por alguma ação específica.
+*/
+
+
+
 import ClickIcon from "../../assets/iconclick.svg";
 import CollabIcon from "../../assets/iconcollab.svg";
 import SafeIcon from "../../assets/iconsafe.svg";
 import TaskIcon from "../../assets/icontask.svg";
 import ViewIcon from "../../assets/iconview.svg";
-import PropTypes from "prop-types";
+
 
 const Card = ({ title, subtitle, icon, hasShadow, isSpecial }) => {
   return (
@@ -36,13 +50,7 @@ const Card = ({ title, subtitle, icon, hasShadow, isSpecial }) => {
   );
 };
 
-Card.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  icon: PropTypes.Image,
-  hasShadow: PropTypes.Boolean,
-  isSpecial: PropTypes.Boolean,
-};
+
 
 const Beneficios = () => {
   return (

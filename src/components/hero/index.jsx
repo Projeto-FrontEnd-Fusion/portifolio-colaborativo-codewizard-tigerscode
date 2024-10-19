@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Header from "./components/header";
 import { LiaReact } from "react-icons/lia";
 import {
@@ -7,14 +6,8 @@ import {
   TbBrandVite,
 } from "react-icons/tb";
 import PhotoGrid from "./components/photo-grid";
-import { useTeamStore } from "../../store/useTeamStore";
 
 const Hero = () => {
-  const { fetchTeamData } = useTeamStore();
-
-  useEffect(() => {
-    fetchTeamData();
-  }, [fetchTeamData]);
 
   return (
     <>

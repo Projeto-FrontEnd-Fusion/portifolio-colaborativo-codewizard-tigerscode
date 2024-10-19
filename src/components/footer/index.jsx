@@ -1,9 +1,11 @@
+import { useTeamStore } from "../../store/useTeamStore";
 import GitButton from "../hero/components/git-button";
 import Menu from "../hero/components/menu";
-import { useTeamStore } from "../../store/useTeamStore";
 
 const Footer = () => {
-  const { teamData } = useTeamStore();
+  const { teamData, isLoading } = useTeamStore();
+
+  if (isLoading) return <span>Carregando...</span>;
 
   return (
     <footer className="dark:bg-primary-muted-muted grid grid-cols-3 grid-rows-2 gap-x-5 rounded-t-3xl bg-black p-8">

@@ -1,26 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Hero from "./components/hero";
-
 import "./index.css";
-import Footer from "./components/footer";
-import Coments from "./components/coments"
+import {App} from "./app"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+//import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import Benefits from "./components/benefits"
-import LangAndTech from "./components/ling-and-tech/LangAndTech"
-import Team from "./components/team";
-import Participate from "./components/participate";
 
+
+const client = new QueryClient()
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <main className="flex flex-col bg-light-bg dark:bg-dark-bg">
-      <Hero />
-      <Benefits />
-      <LangAndTech/>
-      <Team />
-      <Participate />
-      <Coments/>
-      <Footer />
-    </main>
+    <QueryClientProvider client={client}>
+    {/* keep comments <ReactQueryDevtools /> */}
+      <App />
+    </QueryClientProvider>
+
   </React.StrictMode>
 );
