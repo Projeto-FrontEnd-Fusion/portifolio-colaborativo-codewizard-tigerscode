@@ -1,8 +1,10 @@
 import CardItem from "./components/card-item";
 
+import { ParticipateForm } from "./components/form";
+
 const Participate = () => {
   return (
-    <div className="mb-[270px] px-8 lg:px-[100px] dark:text-white" id="about">
+    <div className="flex flex-col mb-[270px] px-2 lg:px-[100px] dark:text-white gap-16" id="about">
       <div className="mb-20 space-y-4">
         <h2 className="text-center font-body text-[28px] font-black lg:text-[48px]">
           Sobre o Projeto Frontend Fusion
@@ -36,17 +38,7 @@ const Participate = () => {
         />
       </div>
 
-      <div className="mx-auto mt-[180px] flex w-full max-w-[750px] flex-col items-center gap-4 lg:gap-10" id="participants">
-        <p className="text-center font-body text-primary lg:text-[32px] dark:text-white">
-          Estamos ansiosos para receber sua inscrição e dar as boas-vindas a
-          você em nossa comunidade!
-        </p>
-        <a href="#">
-          <button className="min-h-[42px] w-[216px] max-w-[459px] rounded-lg bg-btn-primary px-8 py-4 font-body text-lg font-bold text-white-tree transition-colors duration-500 hover:bg-btn-secondary lg:w-[459px] lg:rounded-2xl lg:px-12 lg:py-4 lg:text-4xl">
-            Quero Participar
-          </button>
-        </a>
-      </div>
+      <ParticipateForm />
     </div>
   );
 };
