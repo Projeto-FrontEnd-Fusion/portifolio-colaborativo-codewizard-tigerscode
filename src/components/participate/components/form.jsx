@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { useValidation } from "../../../hooks/useForm";
 import schemaParticipateInscription from "../../../model/schema/participateSchema";
 import { useParticipateForm } from "../Logic/formsLogic";
@@ -11,8 +11,6 @@ export function ParticipateForm() {
 
   const {
     state: {
-      isOpenAreaOfActivity,
-      isOpenSeniority,
       checked,
       optionsAreaOfActivity,
       optionsSeniority,
